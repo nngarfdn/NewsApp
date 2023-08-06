@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_news"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/txt_title_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/news_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_news" />
+
+            <TextView
+                android:id="@+id/txt_content_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/jakarta_insertlive_motivator_mario_teguh_dilaporkan_ke_polisi_atas_dugaan_penipuan_dan_penggelapan_mario_teguh_dilaporkan_sejak_juni_lalu_karena_dituding_melakukan_penggelapan_uang_sebesar_rp5_miliar_pihak_kepolisian_pun_kini_tengah_mendalami_kasus_dugaan_penipuan_dan_penggelapan_ini_quot_memang_kami_di_bulan_lalu_tanggal_19_juni_2023_sudah_membuat_lp_terhadap_pada_seorang_yang_berinisial_mt_dan_kemudian_lp_nya_dengan_nomor_3505_yang_saat_ini_tengah_didalami_oleh_rekan_rekan_polda_metro_jaya_quot_kata_djamaludin_koedoeboen_kuasa_hukum_pelapor_saat_ditemui_di_polda_metro_jaya_kamis_13_7_quot_dugaan_penipuan_dan_penggelapan_kurang_lebih_rp5_miliar_quot_lanjutnya_mengutip_detikcom_baca_juga_tanggapan_fanni_lauren_eks_puteri_indonesia_soal_tudingan_penipuan_mario_teguh_dilaporkan_setelah_dinilai_tidak_menjalankan_kerja_sama_sesuai_dengan_perjanjian_ia_dijadikan_sebagai_brand_ambassador_oleh_sang_pelapor_pelapor_pun_berharap_akan_mendapatkan_untung_besar_setelah_menjadikan_mario_teguh_sebagai_ba_nya_quot_rencananya_minggu_depan_baru_klien_kami_dimintai_keterangannya_ada_janji_yang_bersangkutan_untuk_meng_up_skin_care_atau_bisnis_dari_klien_kami_yang_pada_akhirnya_itu_tidak_dilakukan_sehingga_klien_kami_mengalami_kerugian_cukup_besar_dan_menggelontorkan_sejumlah_uang_kepada_yang_bersangkutan_sejumlah_kurang_lebih_rp5_miliar_quot_papar_djamaludin_quot_beliau_selaku_ba_sekaligus_juga_istrinya_jadi_kita_ada_dua_terlapor_di_sini_yang_bersangkutan_dengan_istrinya_quot_tambahnya_mario_teguhmario_teguh_foto_instagram_linnateguh_mario_teguh_disebut_telah_disomasi_sebanyak_tiga_kali_namun_tak_mendapat_tanggapan_hingga_akhirnya_pelapor_memutuskan_untuk_membuat_laporan_polisi_quot_kita_sudah_mensomasi_yang_bersangkutan_tiga_kali_tapi_tidak_ada_tanggapan_dari_yang_bersangkutan_maka_dari_itu_dengan_terpaksa_lah_kita_melakukan_lp_ini_quot_kata_sang_pengacara"
+                app:layout_constraintEnd_toEndOf="@+id/txt_title_news"
+                app:layout_constraintStart_toStartOf="@+id/txt_title_news"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_news" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txt_title_news"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/txt_content_news" />
+
+            <Button
+                android:id="@+id/btn_prev"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/before"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_next"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_content_news" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
